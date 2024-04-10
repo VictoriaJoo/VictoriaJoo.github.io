@@ -7,10 +7,10 @@
 	<meta name="theme-color" content="#FFFFFF">
 	<link rel="icon" href="./static/image/favicon.ico">
 	<link rel="manifest" href="/manifest.json">
-	<title>휘진, 현정 결혼합니다. </title>
+	<title>휘진, 현정 결혼합니다.</title>
 	<meta name="robots" content="index,follow">
 	<meta name="description" content="2025년 2월 22일 토요일 11시 ">
-	<meta property="og:title" content="휘진, 현정 결혼합니다. ">
+	<meta property="og:title" content="휘진, 현정 결혼합니다.">
 	<meta property="og:description" content="2025년 2월 22일 토요일 11시 ">
 	<meta property="og:url" content="https://victoriajoo.github.io">
 	<meta property="og:image" content="https://victoriajoo.github.io/static/image/gallery/main.jpg">
@@ -48,6 +48,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
 		integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js" integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01" crossorigin="anonymous"></script>
 	<style data-emotion="css 1k371a6" data-s="">
 		@media print {
 			.css-1k371a6 {
@@ -1521,12 +1522,12 @@
 			width: 100%;
 			touch-action: auto;
 		}
-
 	</style>
 	<script type="text/javascript" charset="utf8" async="" src="https://www.youtube.com/iframe_api"></script>
 </head>
 
-<body oncontextmenu = "return false" ondragstart = "return false" style="touch-action: pan-y; background: rgb(53, 54, 58);" class="prevent_img">
+<body oncontextmenu="return false" ondragstart="return false" style="touch-action: pan-y; background: rgb(53, 54, 58);"
+	class="prevent_img">
 	<div id="__next">
 		<script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></script>
 		<script type="text/javascript"
@@ -2270,7 +2271,8 @@
 													</div>
 													<ul class="slick-dots" style="display: block;">
 														<li class="slick-active" onclick="changeGalleryPage(1)">
-															<button>1</button></li>
+															<button>1</button>
+														</li>
 														<li onclick="changeGalleryPage(2)"><button>2</button></li>
 														<li onclick="changeGalleryPage(3)"><button>3</button></li>
 														<li onclick="changeGalleryPage(4)"><button>4</button></li>
@@ -2573,7 +2575,8 @@
 										<div class="pt-[1.8rem] text-center">
 											<div><button
 													class="bg-[#DBDCDD] rounded-[30px] py-[0.7rem] px-[5rem] text-[0.9rem] text-[#6D6E71] fonts-semibold"
-													type="button" onclick="openModal('maleSend')">신랑측 계좌번호</button></div>
+													type="button" onclick="openModal('maleSend')">신랑측 계좌번호</button>
+											</div>
 										</div>
 										<div class="pt-[0.8rem] text-center">
 											<div><button
@@ -2682,9 +2685,9 @@
 							<div class="border-t py-[4rem] border bg-[#FFF]">
 								<div class="flex items-center justify-center"
 									style=" transform: translate3d(0px, 50%, 0px);">
-									<button class="mr-3"><label
-											class="cursor-pointer flex items-center text-[0.75rem]"><svg
-												xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill=""
+									<button class="mr-3" onclick="kakaoShare()">
+										<label class="cursor-pointer flex items-center text-[0.75rem]">
+											<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill=""
 												viewbox="0 0 72.545 72.545">
 												<g id="그룹_898" data-name="그룹 898"
 													transform="translate(-1790.654 -12105.781)">
@@ -2695,9 +2698,12 @@
 														d="M1826.927,12125.574c-11,0-19.922,7.047-19.922,15.739,0,5.217,3.219,9.835,8.166,12.7l-2.345,8.762a.94.94,0,0,0,1.434,1.022l10.176-6.87c.817.081,1.646.127,2.491.127,11,0,19.922-7.046,19.922-15.738s-8.918-15.739-19.922-15.739"
 														fill="#181817"></path>
 												</g>
-											</svg><span id="kakao_share_button" class="ml-2">카카오톡
-												공유하기</span></label></button><button type="button" class="ml-3"><label
-											class="cursor-pointer flex items-center text-[0.75rem]">
+											</svg>
+											<span id="kakao_share_button" class="ml-2">카카오톡 공유하기</span>
+										</label>
+									</button>
+									<button type="button" class="ml-3" onclick="copy('https://victoriajoo.github.io/')">
+										<label class="cursor-pointer flex items-center text-[0.75rem]">
 											<div
 												class="w-[30px] h-[30px] rounded-[50%] bg-[#E7E5E4] flex items-center justify-center">
 												<svg width="20px" height="20px" fill="#383637" viewbox="0 0 64 64"
@@ -2713,7 +2719,8 @@
 												</svg>
 											</div>
 											<span class="ml-2">URL 주소 복사하기</span>
-										</label></button>
+										</label>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -2723,7 +2730,8 @@
 		</div>
 	</div>
 
-	<div id="imageViewer" role="presentation" id="viewer_modal" class="MuiDialog-root MuiModal-root css-opazwj" style="display: none;">
+	<div id="imageViewer" role="presentation" id="viewer_modal" class="MuiDialog-root MuiModal-root css-opazwj"
+		style="display: none;">
 		<div aria-hidden="true" class="MuiBackdrop-root MuiModal-backdrop css-919eu4"
 			style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
 		<div tabindex="0" data-testid="sentinelStart"></div>
@@ -2734,8 +2742,9 @@
 				<div class="relative">
 					<div class="slick-slider prevent_zoom slick-initialized" dir="ltr">
 						<div class="slick-arrow slick-prev" data-role="none" currentslide="2" slidecount="30"
-							style="display: block;" onclick="prevDetail()"><svg id="_레이어_2" data-name="레이어 2" width="20px" height="20px"
-								fill="#FFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.32 17.14">
+							style="display: block;" onclick="prevDetail()"><svg id="_레이어_2" data-name="레이어 2"
+								width="20px" height="20px" fill="#FFF" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 11.32 17.14">
 								<g id="Layer_2" data-name="Layer 2">
 									<path class="cls-1"
 										d="m4.87,9.13c-.36-.29-.36-.84,0-1.13l5.17-4.1,1.01-.81c.17-.14.27-.35.27-.57V.72c0-.61-.7-.94-1.17-.57l-4.71,3.74L.27,8c-.36.29-.36.84,0,1.13l5.17,4.1,4.71,3.74c.47.38,1.17.04,1.17-.57v-1.8c0-.22-.1-.43-.27-.57l-1.01-.81-5.17-4.1Z">
@@ -3063,8 +3072,9 @@
 							</div>
 						</div>
 						<div class="slick-arrow slick-next" data-role="none" currentslide="2" slidecount="30"
-							style="display: block;" onclick="nextDetail()"><svg id="_레이어_2" data-name="레이어 2" width="20px" height="20px"
-								fill="#FFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.32 17.14">
+							style="display: block;" onclick="nextDetail()"><svg id="_레이어_2" data-name="레이어 2"
+								width="20px" height="20px" fill="#FFF" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 11.32 17.14">
 								<g id="Layer_2" data-name="Layer 2">
 									<path class="cls-1"
 										d="m6.45,8c.36.29.36.84,0,1.13L1.29,13.24l-1.01.81c-.17.14-.27.35-.27.57v1.8c0,.61.7.94,1.17.57l4.71-3.74,5.17-4.1c.36-.29.36-.84,0-1.13L5.88,3.9,1.17.16C.7-.22,0,.12,0,.72v1.8c0,.22.1.43.27.57l1.01.81,5.17,4.1Z">
@@ -3072,10 +3082,9 @@
 								</g>
 							</svg></div>
 					</div>
-					<button class="fixed right-5 top-5 z-10"
-						onclick="closeImageView()">
-						<svg width="20px" height="20px" fill="white"
-							viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+					<button class="fixed right-5 top-5 z-10" onclick="closeImageView()">
+						<svg width="20px" height="20px" fill="white" viewBox="0 0 329.26933 329"
+							xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0">
 							</path>
@@ -3262,15 +3271,15 @@
 
 	const changeGalleryDetailPage = (pageNo) => {
 		const xPos = 0 + screen.width * (pageNo - 1);
-		document.querySelector(".gallery-detail").setAttribute("style", `width: ${35*screen.width}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
+		document.querySelector(".gallery-detail").setAttribute("style", `width: ${35 * screen.width}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
 	}
 
 	const prevDetail = () => {
 		const styleString = document.querySelector(".gallery-detail").getAttribute("style");
 		const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
-		const nextXPos =  nowXPos - screen.width;
-		if(nextXPos>=0){
-			changeGalleryDetailPage(nextXPos/screen.width + 1);
+		const nextXPos = nowXPos - screen.width;
+		if (nextXPos >= 0) {
+			changeGalleryDetailPage(nextXPos / screen.width + 1);
 		}
 	}
 
@@ -3278,14 +3287,28 @@
 		const styleString = document.querySelector(".gallery-detail").getAttribute("style");
 		const maxWidth = Number(styleString.split("px;")[0].split("width: ")[1]);
 		const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
-		const nextXPos =  nowXPos + screen.width;
+		const nextXPos = nowXPos + screen.width;
 
 		console.log(maxWidth);
 
-		if(nextXPos<maxWidth){
-			changeGalleryDetailPage(nextXPos/screen.width + 1);
+		if (nextXPos < maxWidth) {
+			changeGalleryDetailPage(nextXPos / screen.width + 1);
 		}
 	}
+
+	const kakaoShare = () => {
+		Kakao.Share.sendDefault({
+			objectType: 'text',
+			text:
+				'김휘진 ♥ 주현정  청첩장, 2025년 2월 22일 토요일 11시',
+			link: {
+				mobileWebUrl: 'https://victoriajoo.github.io',
+				webUrl: 'https://victoriajoo.github.io',
+			},
+		});
+	}
+
+	Kakao.init('dd407642db7895a3cd2f0bb6d431ead3');
 
 	playMusic();
 
@@ -3297,8 +3320,8 @@
 	document.querySelectorAll(".gallery-item").forEach(
 		item => {
 			const splitPath = item.querySelector("img").src.split("/");
-			const pageNo = Number(splitPath[splitPath.length-1].split(".")[0]);
-			
+			const pageNo = Number(splitPath[splitPath.length - 1].split(".")[0]);
+
 			item.addEventListener('click', () => {
 				openImageView(pageNo);
 			});
