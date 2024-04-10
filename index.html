@@ -42,6 +42,9 @@
 
 	<script src="./static/jNqgek4SQU0-LOxT3IrTB/_buildManifest.js" defer="" type="text/javascript"></script>
 	<script src="./static/jNqgek4SQU0-LOxT3IrTB/_ssgManifest.js" defer="" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<style data-emotion="css 1k371a6" data-s="">
 		@media print {
 			.css-1k371a6 {
@@ -1444,6 +1447,53 @@
 			bottom: 0;
 			left: auto
 		}
+
+		.css-126xj0f {
+			position: fixed;
+			z-index: 1300;
+			inset: 0px;
+		}
+		.css-919eu4 {
+			position: fixed;
+			display: flex;
+			-webkit-box-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			justify-content: center;
+			inset: 0px;
+			background-color: rgba(0, 0, 0, 0.5);
+			-webkit-tap-highlight-color: transparent;
+			z-index: -1;
+		}
+		.css-ekeie0 {
+			height: 100%;
+			outline: 0px;
+			display: flex;
+			-webkit-box-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			align-items: center;
+		}
+		.css-1xp58ha {
+			background-color: rgb(255, 255, 255);
+			color: rgba(0, 0, 0, 0.87);
+			transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+			border-radius: 4px;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+			margin: 32px;
+			position: relative;
+			overflow-y: auto;
+			display: flex;
+			flex-direction: column;
+			max-height: calc(100% - 64px);
+			max-width: 444px;
+			width: calc(100% - 64px);
+		}
+		.css-1ty026z {
+			flex: 1 1 auto;
+			overflow-y: auto;
+			padding: 20px 24px;
+		}
 	</style>
 	<script type="text/javascript" charset="utf8" async="" src="https://www.youtube.com/iframe_api"></script>
 </head>
@@ -1533,7 +1583,7 @@
 													2025년 2월 22일 토요일
 												</p>
 												<p class="ml-1 font-semibold text-[#6E6F71] text-[15px]">
-													오후 12:00
+													오전 11:00
 												</p>
 											</div>
 											<div class="flex flex-col items-center pb-[64px] text-[#676767]">
@@ -1610,7 +1660,7 @@
 											2025년 2월 22일 토요일
 										</p>
 										<p class="text-[#6E6F71] text-[17px]">
-											오후 12:00
+											오전 11:00
 										</p>
 									</div>
 									<hr class="mx-[1rem] my-[1.5rem]">
@@ -2774,12 +2824,14 @@
 										<div class="pt-[1.8rem] text-center">
 											<div><button
 													class="bg-[#DBDCDD] rounded-[30px] py-[0.7rem] px-[5rem] text-[0.9rem] text-[#6D6E71] fonts-semibold"
-													type="button">신랑측 계좌번호</button></div>
+													type="button"
+													onclick="openSend('maleSend')">신랑측 계좌번호</button></div>
 										</div>
 										<div class="pt-[0.8rem] text-center">
 											<div><button
 													class="bg-[#DBDCDD] rounded-[30px] py-[0.7rem] px-[5rem] text-[0.9rem] text-[#6D6E71] fonts-semibold"
-													type="button">신부측 계좌번호</button></div>
+													type="button"
+													onclick="openSend('femaleSend')">신부측 계좌번호</button></div>
 										</div>
 									</div>
 								</div>
@@ -2922,7 +2974,7 @@
 			</div>
 		</div>
 	</div>
-	<div role="presentation" class="MuiDialog-root MuiModal-root css-126xj0f">
+	<div id="maleSend" role="presentation" class="MuiDialog-root MuiModal-root css-126xj0f" style="display: none;">
 		<div aria-hidden="true" class="MuiBackdrop-root MuiModal-backdrop css-919eu4"
 			style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
 		<div tabindex="0" data-testid="sentinelStart"></div>
@@ -2941,14 +2993,14 @@
 							<div class="mb-4 text-[13px]">
 								<div class="flex mb-[0.25rem]">
 									<div class="flex-auto w-[25%] font-semibold false">신랑</div>
-									<div class="flex-auto w-[55%] font-semibold">공한빛</div>
+									<div class="flex-auto w-[55%] font-semibold">김휘진</div>
 									<div class="flex-auto w-[20%]"><button type="button"
 											class="h-[25px] w-full bg-[#818181] text-white text-[0.7rem] py-[0.2rem] rounded-[5px] hover:opacity-50">복사하기</button>
 									</div>
 								</div>
 								<div class="flex">
 									<div class="flex-auto w-[25%]">우체국</div>
-									<div class="flex-auto w-[55%]">40041602284022</div>
+									<div class="flex-auto w-[55%]">123456789</div>
 									<div class="flex-auto w-[20%]"><button
 											class="h-[25px] w-full hover:opacity-50 bg-[#fee12f] rounded-[5px] flex items-center justify-center">
 											<img
@@ -2962,21 +3014,96 @@
 							</div>
 							<div class="mb-4 text-[13px]">
 								<div class="flex mb-[0.25rem]">
-									<div class="flex-auto w-[25%] font-semibold false">신랑 어머님</div>
-									<div class="flex-auto w-[55%] font-semibold">고송숙</div>
+									<div class="flex-auto w-[25%] font-semibold false">신랑 어버님</div>
+									<div class="flex-auto w-[55%] font-semibold">김광수</div>
 									<div class="flex-auto w-[20%]"><button type="button"
 											class="h-[25px] w-full bg-[#818181] text-white text-[0.7rem] py-[0.2rem] rounded-[5px] hover:opacity-50">복사하기</button>
 									</div>
 								</div>
 								<div class="flex">
-									<div class="flex-auto w-[25%]">농협</div>
-									<div class="flex-auto w-[55%]">50107352255390</div>
+									<div class="flex-auto w-[25%]">농협은행</div>
+									<div class="flex-auto w-[55%]">123456789</div>
 									<div class="flex-auto w-[20%]"></div>
 								</div>
 							</div>
 						</div>
-						<div class="text-center px-[1rem]"><button
-								class="bg-[#FBD261] w-[100%] rounded-[10px] h-[50px] hover:opacity-50 font-semibold">닫기</button>
+						<div class="text-center px-[1rem]">
+							<button 
+								class="bg-[#FBD261] w-[100%] rounded-[10px] h-[50px] hover:opacity-50 font-semibold"
+								onclick="closeSend('maleSend')">
+								닫기
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="0" data-testid="sentinelEnd"></div>
+	</div>
+	<div id="femaleSend" role="presentation" class="MuiDialog-root MuiModal-root css-126xj0f" style="display: none;">
+		<div aria-hidden="true" class="MuiBackdrop-root MuiModal-backdrop css-919eu4"
+			style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
+		<div tabindex="0" data-testid="sentinelStart"></div>
+		<div class="MuiDialog-container MuiDialog-scrollPaper css-ekeie0" role="presentation" tabindex="-1"
+			style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;">
+			<div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXs MuiDialog-paperFullWidth css-1xp58ha"
+				role="dialog" aria-describedby="alert-dialog-description" aria-labelledby="alert-dialog-title">
+				<div class="bg-[#F7F8F9] pt-3 goun_batang">
+					<div class="py-[16px] px-[24px]">
+						<div class="flex justify-between dialog_header border-[#818181] border-b">
+							<h4 class="text-[1.2rem] mb-3 text-left font-semibold">신부측 계좌번호</h4>
+						</div>
+					</div>
+					<div class="MuiDialogContent-root px-0 css-1ty026z">
+						<div class="flex flex-col py-[1rem] px-[24px]">
+							<div class="mb-4 text-[13px]">
+								<div class="flex mb-[0.25rem]">
+									<div class="flex-auto w-[25%] font-semibold false">신부</div>
+									<div class="flex-auto w-[55%] font-semibold">주현정</div>
+									<div class="flex-auto w-[20%]">
+										<button 
+											type="button"
+											class="h-[25px] w-full bg-[#818181] text-white text-[0.7rem] py-[0.2rem] rounded-[5px] hover:opacity-50"
+											onclick="copy('123456789')"
+											>복사하기</button>
+									</div>
+								</div>
+								<div class="flex">
+									<div class="flex-auto w-[25%]">우리은행</div>
+									<div class="flex-auto w-[55%]">123456789</div>
+									<div class="flex-auto w-[20%]"><button
+											class="h-[25px] w-full hover:opacity-50 bg-[#fee12f] rounded-[5px] flex items-center justify-center">
+											<img
+												alt="pay"
+												srcset="./static/image/kkapay.webp"
+												src="./static/image/kkapay.webp"
+												width="2000" height="616" decoding="async" data-nimg="1"
+												class="p-[0.5rem] max-w-[50px]" loading="lazy"
+												style="color: transparent;"></button></div>
+								</div>
+							</div>
+							<div class="mb-4 text-[13px]">
+								<div class="flex mb-[0.25rem]">
+									<div class="flex-auto w-[25%] font-semibold false">신부 아버님</div>
+									<div class="flex-auto w-[55%] font-semibold">주진수</div>
+									<div class="flex-auto w-[20%]"><button type="button"
+											class="h-[25px] w-full bg-[#818181] text-white text-[0.7rem] py-[0.2rem] rounded-[5px] hover:opacity-50"
+											onclick="copy('123456789')">복사하기</button>
+									</div>
+								</div>
+								<div class="flex">
+									<div class="flex-auto w-[25%]">농협은행</div>
+									<div class="flex-auto w-[55%]">123456789</div>
+									<div class="flex-auto w-[20%]"></div>
+								</div>
+							</div>
+						</div>
+						<div class="text-center px-[1rem]">
+							<button 
+								class="bg-[#FBD261] w-[100%] rounded-[10px] h-[50px] hover:opacity-50 font-semibold"
+								onclick="closeSend('femaleSend')">
+								닫기
+							</button>
 						</div>
 					</div>
 				</div>
@@ -2995,6 +3122,23 @@
 		const audio = document.querySelector('audio');
 		audio.pause();
 		audio.currentTime = 0;
+	}
+
+	const openSend = (id) => {
+		const send = document.querySelector('#'+id);
+		send.setAttribute("style", "display:block");
+	}
+
+	const closeSend = (id) => {
+		const send = document.querySelector('#'+id);
+		send.setAttribute("style", "display:none");
+	}
+
+	const copy = (text) => {
+        navigator.clipboard.writeText(text)
+                .then(() => {
+                  toastr.success("복사되었습니다.");
+                });
 	}
 
 	const weddingDay = new Date('2025-02-22');
