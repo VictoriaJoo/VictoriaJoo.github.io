@@ -2095,8 +2095,118 @@
       
     })
 
-    
+    const playMusic = () => {
+      const audio = document.querySelector('audio');
+      audio.play();
+    }
 
+    const stopMusic = () => {
+      const audio = document.querySelector('audio');
+      audio.pause();
+      audio.currentTime = 0;
+    }
+
+    const openModal = (id) => {
+      const send = document.querySelector('#' + id);
+      send.setAttribute("style", "display:block");
+    }
+
+    const closeModal = (id) => {
+      const send = document.querySelector('#' + id);
+      send.setAttribute("style", "display:none");
+    }
+
+    const openImageView = (pageNo) => {
+      document.body.setAttribute("style", "touch-action: pan-y; background: rgb(53, 54, 58); overflow-y: hidden");
+      changeGalleryDetailPage(pageNo);
+      openModal("imageViewer");
+    }
+
+    const closeImageView = () => {
+      document.body.setAttribute("style", "touch-action: pan-y; background: rgb(53, 54, 58);");
+      closeModal("imageViewer");
+    }
+
+    const copy = (text) => {
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          toastr.success("복사되었습니다.");
+        });
+    }
+
+    const changeGalleryPage = (pageNo) => {
+      const xPos = 0 + 366 * (pageNo - 1);
+      document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: 1464px;`);
+
+      const dots = document.querySelector(".slick-dots");
+      Array.from(dots.children).forEach(dot => dot.setAttribute("class", ""));
+      dots.children.item(pageNo - 1).setAttribute("class", "slick-active");
+    }
+
+    const changeGalleryDetailPage = (pageNo) => {
+      const xPos = 0 + screen.width * (pageNo - 1);
+      document.querySelector(".gallery-detail").setAttribute("style", `width: ${35 * screen.width}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
+    }
+
+    const prevDetail = () => {
+      const styleString = document.querySelector(".gallery-detail").getAttribute("style");
+      const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
+      const nextXPos = nowXPos - screen.width;
+      if (nextXPos >= 0) {
+        changeGalleryDetailPage(nextXPos / screen.width + 1);
+      }
+    }
+
+    const nextDetail = () => {
+      const styleString = document.querySelector(".gallery-detail").getAttribute("style");
+      const maxWidth = Number(styleString.split("px;")[0].split("width: ")[1]);
+      const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
+      const nextXPos = nowXPos + screen.width;
+
+      console.log(maxWidth);
+
+      if (nextXPos < maxWidth) {
+        changeGalleryDetailPage(nextXPos / screen.width + 1);
+      }
+    }
+
+    const kakaoShare = () => {
+      Kakao.Share.sendDefault({
+        objectType: 'text',
+        text:
+          '김휘진 ♥ 주현정  청첩장, 2025년 2월 22일 토요일 11시',
+        link: {
+          mobileWebUrl: 'https://victoriajoo.github.io',
+          webUrl: 'https://victoriajoo.github.io',
+        },
+      });
+    }
+
+    Kakao.init('27564ef0f4e2585c31e0bbe0b1e416ac');
+
+    playMusic();
+
+    const weddingDay = new Date('2025-02-22');
+    const today = new Date;
+    const leftDay = Math.ceil((weddingDay.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+    document.querySelector("#leftDay").innerText = ` ${leftDay}일 `;
+
+    document.querySelectorAll(".gallery-item").forEach(
+      item => {
+        const splitPath = item.querySelector("img").src.split("/");
+        const pageNo = Number(splitPath[splitPath.length - 1].split(".")[0]);
+
+        item.addEventListener('click', () => {
+          openImageView(pageNo);
+        });
+      }
+    )
+
+    document.querySelectorAll(".select-none").forEach(
+      item => {
+        item.setAttribute("style", `width: ${screen.width}px; display: inline-block;`);
+      }
+    )
   </script>
 </body>
 
