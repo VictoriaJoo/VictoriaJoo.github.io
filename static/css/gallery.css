@@ -3511,7 +3511,7 @@ abbr:where([title]) {
     width: 5px;
     height: 5px;
     line-height: 5px;
-    scale: .8
+    scale: 5
 }
 
 .slick-track {
