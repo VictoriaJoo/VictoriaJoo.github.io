@@ -2017,7 +2017,9 @@
     // 마커 생성
     var marker = new naver.maps.Marker(markerOptions);
 
-  const width = Math.min(window.innerWidth, 800);
+  const detailWidth = Math.min(window.innerWidth, 800);
+  const galleryWidth = Math.min(window.innerWidth-22, 418);
+
   const aosElems = document.querySelectorAll(".aos-init");
 
   window.addEventListener('scroll', () => {
@@ -2080,8 +2082,8 @@
   }
 
   const changeGalleryPage = (pageNo) => {
-    const xPos = 0 + 418 * (pageNo - 1);
-    document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: 1674px;`);
+    const xPos = 0 + (galleryWidth) * (pageNo - 1);
+    document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${(galleryWidth)*4}px;`);
 
     const dots = document.querySelector(".slick-dots");
     Array.from(dots.children).forEach(dot => dot.setAttribute("class", ""));
@@ -2089,16 +2091,16 @@
   }
 
   const changeGalleryDetailPage = (pageNo) => {
-    const xPos = 0 + width * (pageNo - 1);
-    document.querySelector(".gallery-detail").setAttribute("style", `width: ${35 * width}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
+    const xPos = 0 + detailWidth * (pageNo - 1);
+    document.querySelector(".gallery-detail").setAttribute("style", `width: ${35 * detailWidth}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
   }
 
   const prevDetail = () => {
     const styleString = document.querySelector(".gallery-detail").getAttribute("style");
     const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
-    const nextXPos = nowXPos - width;
+    const nextXPos = nowXPos - detailWidth;
     if (nextXPos >= 0) {
-      changeGalleryDetailPage(nextXPos / width + 1);
+      changeGalleryDetailPage(nextXPos / detailWidth + 1);
     }
   }
 
@@ -2106,12 +2108,12 @@
     const styleString = document.querySelector(".gallery-detail").getAttribute("style");
     const maxWidth = Number(styleString.split("px;")[0].split("width: ")[1]);
     const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
-    const nextXPos = nowXPos + width;
+    const nextXPos = nowXPos + detailWidth;
 
     console.log(maxWidth);
 
     if (nextXPos < maxWidth) {
-      changeGalleryDetailPage(nextXPos / width + 1);
+      changeGalleryDetailPage(nextXPos / detailWidth + 1);
     }
   }
 
@@ -2138,6 +2140,13 @@
   // )
 
   console.log("start");
+
+  document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-0px, 0px, 0px); width: ${(galleryWidth)*4}px;`);
+  document.querySelectorAll('.gallery > .slick-slide').forEach(
+    item => {
+      item.setAttribute("style", `outline: none; width: ${galleryWidth}px;`);
+    }
+  )
 
   document.querySelectorAll(".gallery-item").forEach(
     item => {
