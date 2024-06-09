@@ -14,6 +14,16 @@
   <meta data-n-head="ssr" data-hid="og:image" property="og:image"
     content="https://victoriajoo.github.io/static/image/gallery/main.jpg">
   <title>휘진❤️현정 청첩장.</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+		integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+		integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=hh0828cudj"></script>
+
   <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png">
   <link data-n-head="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css" />
@@ -815,293 +825,13 @@
                           </a></div> <button data-v-a8cb2402="" id="copy-map-address"
                           data-clipboard-text="서울특별시 송파구 올림픽로35다길 42 잠실 더 베네치아"
                           class="style-border mt-3 mx-auto py-2 px-5 relative flex justify-center items-center min-h-[4rem] bg-white rounded-lg border text-base tracking-tighter"><span
-                            data-v-a8cb2402="">주소 복사</span>
-                          <div data-v-a8cb2402="" id="copy-map-address-popup"
-                            class="px-3 py-1 copy-notice absolute -bottom-[2.75rem] left-1/2 -translate-x-1/2 flex items-center bg-[#444] bg-opacity-50 opacity-0 rounded-md text-sm text-white transition-all duration-500 whitespace-nowrap cursor-default">
-                            <span data-v-a8cb2402="">주소가 복사되었습니다</span>
-                          </div>
+                            data-v-a8cb2402="" onclick="copy('서울특별시 송파구 올림픽로35다길 42 잠실 더 베네치아')">주소 복사</span>
                         </button>
                       </div>
                     </div> <!---->
                     <div data-v-a8cb2402="" data-aos="fade-up" class="px-12 w-full aos-init">
-                      <div data-v-a8cb2402="" class="flex">
-                        <div data-v-a8cb2402=""
-                          class="style-button2 mb-4 py-2 px-6 flex items-center justify-center min-w-[4rem] min-h-[4.5rem] rounded-lg border cursor-pointer">
-                          <svg data-v-a8cb2402="" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512" class="lockicon text-[#222]">
-                            <path data-v-a8cb2402=""
-                              d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z">
-                            </path>
-                          </svg> <!---->
-                        </div> <!---->
-                      </div>
-                      <div data-v-a8cb2402="" class="relative w-full"><!---->
-                        <div data-v-a8cb2402="" id="map" class="style-border w-full h-[31rem] mx-auto border rounded-lg"
-                          tabindex="0" style="position: relative; overflow: hidden; background: rgb(248, 249, 250);">
-                          <div
-                            style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0; cursor: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/openhand.cur&quot;), default;">
-                            <div
-                              style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0;">
-                              <div
-                                style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 1;">
-                                <div
-                                  style="overflow: visible; width: 100%; height: 0px; position: absolute; display: none; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 0; user-select: none;">
-                                </div>
-                                <div
-                                  style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 1; user-select: none;">
-                                  <div
-                                    style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 0px; height: 0px; overflow: visible; box-sizing: content-box !important;">
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: 35px; left: 82px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111955/50898.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: 291px; left: 82px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111955/50899.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: -221px; left: 82px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111955/50897.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: -221px; left: 338px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111956/50897.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: 291px; left: -174px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111954/50899.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: 35px; left: 338px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111956/50898.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: 35px; left: -174px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111954/50898.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: 291px; left: 338px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111956/50899.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                    <div draggable="false" unselectable="on"
-                                      style="position: absolute; top: -221px; left: -174px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
-                                      <img draggable="false" unselectable="on" alt="" crossorigin="anonymous"
-                                        width="256" height="256"
-                                        src="https://nrbe.pstatic.net/styles/basic/1712881073/17/111954/50897.png?mt=bg.ol.sw.ar.lko"
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 100;">
-                                  <div
-                                    style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 101;">
-                                  </div>
-                                  <div
-                                    style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 103;">
-                                    <div title=""
-                                      style="position: absolute; overflow: hidden; box-sizing: content-box !important; cursor: inherit; left: 179px; top: 122px; width: 22px; height: 33px;">
-                                      <map name="nmarker-DD3DD44E-7E64-4D24-B275-2B55E5BA6700"><area href="#"
-                                          shape="poly"
-                                          coords="11,0,9,0,6,1,4,2,2,4,0,8,0,12,1,14,2,16,5,19,5,20,6,23,8,26,9,30,9,34,13,34,13,30,14,26,16,23,17,20,17,19,20,16,21,14,22,12,22,12,22,8,20,4,18,2,16,1,13,0"
-                                          alt="마커의 경위도는 127.4947579,37.2599134 입니다."
-                                          style="display: block; cursor: pointer;"></map><img draggable="false"
-                                        unselectable="on"
-                                        src="https://ssl.pstatic.net/static/maps/mantle/1x/marker-default.png" alt=""
-                                        style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; position: absolute; cursor: inherit; width: 22px; height: 33px; left: 0px; top: 0px;"><img
-                                        src="https://ssl.pstatic.net/static/maps/mantle/1x/dot.gif" alt=""
-                                        usemap="#nmarker-DD3DD44E-7E64-4D24-B275-2B55E5BA6700"
-                                        style="position: absolute; border: 0px; left: 0px; top: 0px; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; width: 22px; height: 33px;">
-                                    </div>
-                                  </div>
-                                  <div
-                                    style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 106;">
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                style="position: absolute; display: none; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(255, 255, 255); z-index: 10000; opacity: 0.5;">
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; right: 0px;">
-                            <div
-                              style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: right; height: 17px;">
-                              <a href="https://ssl.pstatic.net/static/maps/mantle/notice/legal.html" target="_blank"
-                                style="display: block; width: 45px; height: 10px; overflow: hidden; margin: 0px 5px 7px 12px; pointer-events: auto;"><img
-                                  src="https://ssl.pstatic.net/static/maps/mantle/1x/naver-logo-normal-new.png"
-                                  width="45" height="10" alt="NAVER"
-                                  style="display:block;width:45px;height:10px;overflow:hidden;border:0 none;margin:0;padding:0;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"></a>
-                            </div>
-                          </div>
-                          <div
-                            style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; left: 0px;">
-                            <div
-                              style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: left; height: 20px;">
-                              <div
-                                style="position: relative; width: 53px; height: 14px; margin: 0px 12px 6px 2px; overflow: hidden; pointer-events: auto;">
-                                <span
-                                  style="display: block; margin: 0px; padding: 0px 4px; text-align: center; font-size: 10px; line-height: 11px; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-weight: 700; color: rgb(34, 34, 37); text-shadow: rgba(255, 255, 255, 0.8) -1px 0px, rgba(255, 255, 255, 0.8) 0px 1px, rgba(255, 255, 255, 0.8) 1px 0px, rgba(255, 255, 255, 0.8) 0px -1px;">50m</span><img
-                                  src="https://ssl.pstatic.net/static/maps/mantle/1x/new-scale-normal-b.png" width="47"
-                                  height="3" alt=""
-                                  style="position: absolute; left: 3px; bottom: 0px; z-index: 2; display: block; width: 47px; height: 3px; overflow: hidden; margin: 0px; padding: 0px; border: 0px none; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><img
-                                  src="https://ssl.pstatic.net/static/maps/mantle/1x/new-scale-normal-l.png" width="3"
-                                  height="8" alt=""
-                                  style="position:absolute;left:0;bottom:0;z-index:2;display:block;width:3px;height:8px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"><img
-                                  src="https://ssl.pstatic.net/static/maps/mantle/1x/new-scale-normal-r.png" width="3"
-                                  height="8" alt=""
-                                  style="position:absolute;right:0;bottom:0;z-index:2;display:block;width:3px;height:8px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;">
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; top: 0px; right: 0px;">
-                            <div
-                              style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: right;">
-                              <div style="position: relative; z-index: 3; pointer-events: auto;">
-                                <div
-                                  style="position: relative; z-index: 0; width: 28px; margin: 10px; border: 1px solid rgb(68, 68, 68); box-sizing: content-box !important; user-select: none;">
-                                  <a href="#"
-                                    style="position: relative; z-index: 2; width: 28px; height: 22px; cursor: pointer; display: block; overflow: hidden; border-bottom: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"><img
-                                      src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-in-large-normal.png"
-                                      width="28" height="22" alt="지도 확대"
-                                      style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:28px;height:22px;"></a>
-                                  <div
-                                    style="position: relative; width: 28px; height: 156px; overflow: hidden; margin: 0px; padding: 7px 0px; background-color: rgb(255, 255, 255); cursor: pointer; box-sizing: content-box !important; display: block;">
-                                    <div
-                                      style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 156px; display: block; background-color: rgb(47, 135, 236);">
-                                    </div>
-                                    <div
-                                      style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 44px; display: block; background-color: rgb(202, 205, 209);">
-                                    </div><a href="#"
-                                      style="position: absolute; left: 4px; width: 18px; height: 10px; top: 44px; border: 1px solid rgb(68, 68, 68); cursor: move; display: block; overflow: hidden; box-sizing: content-box !important;"><img
-                                        src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-handle.png" width="18"
-                                        height="10" alt="지도 확대/축소 슬라이더"
-                                        style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:18px;height:10px;"></a>
-                                  </div><a href="#"
-                                    style="position: relative; z-index: 2; width: 28px; height: 22px; cursor: pointer; display: block; overflow: hidden; border-top: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"><img
-                                      src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-out-large-normal.png"
-                                      width="28" height="22" alt="지도 축소"
-                                      style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:28px;height:22px;"></a>
-                                  <div
-                                    style="position: absolute; top: 22px; width: 44px; height: 0px; overflow: visible; display: none; left: -51px;">
-                                    <div style="display: block; margin: 0px; padding: 0px;">
-                                      <h4
-                                        style="visibility:hidden;width:0;height:0;overflow:hidden;margin:0;padding:0;">
-                                        지도 컨트롤러 범례</h4>
-                                      <div
-                                        style="position: absolute; top: 43px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
-                                        <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-on.png"
-                                          alt=""
-                                          style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
-                                          style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">부동산</span>
-                                      </div>
-                                      <div
-                                        style="position: absolute; top: 63px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
-                                        <img
-                                          src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
-                                          alt=""
-                                          style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
-                                          style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">거리</span>
-                                      </div>
-                                      <div
-                                        style="position: absolute; top: 83px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
-                                        <img
-                                          src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
-                                          alt=""
-                                          style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
-                                          style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">읍,면,동</span>
-                                      </div>
-                                      <div
-                                        style="position: absolute; top: 113px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
-                                        <img
-                                          src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
-                                          alt=""
-                                          style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
-                                          style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,군,구</span>
-                                      </div>
-                                      <div
-                                        style="position: absolute; top: 143px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
-                                        <img
-                                          src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
-                                          alt=""
-                                          style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
-                                          style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,도</span>
-                                      </div>
-                                      <div
-                                        style="position: absolute; top: 163px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: hidden;">
-                                        <img
-                                          src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
-                                          alt=""
-                                          style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
-                                          style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">국가</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div data-v-a8cb2402="" class="absolute top-0 left-0 w-full h-[31rem] z-[9999999]"><!----></div>
-                      </div>
-                      <div data-v-a8cb2402="" class="hidden">
-                        <div data-v-a8cb2402="" id="sketchmaps" class="relative"></div>
-                      </div>
+                      <div id="map" style="width:100%;height:400px;"></div>
                     </div>
-                    <div data-v-a8cb2402="" data-aos="fade-up" class="mt-12 px-12 flex justify-between w-full aos-init">
-                      <div data-v-a8cb2402="" class="flex flex-col w-full">
-                        <div data-v-a8cb2402="" class="gap-2 flex justify-between w-full h-20">
-                          <div data-v-a8cb2402=""
-                            class="style-button2 text-base flex flex-1 items-center justify-evenly rounded-xl border tracking-tighter whitespace-nowrap cursor-pointer">
-                            <div data-v-a8cb2402="" class="ml-6 flex items-center justify-center w-1/3"><img
-                                data-v-a8cb2402="" src="https://cdn2.makedear.com/homepage/img/icon/navermap1.webp"
-                                draggable="false" class="naviicon mr-2">
-                              네이버지도
-                            </div>
-                            <div data-v-a8cb2402=""
-                              class="style-border mx-6 h-[1.4rem] w-[1px] border-r border-r-[#eee]"></div>
-                            <div data-v-a8cb2402="" class="flex items-center justify-center w-1/3"><img
-                                data-v-a8cb2402="" src="https://cdn2.makedear.com/homepage/img/icon/kakaonavi1.png"
-                                draggable="false" class="naviicon mr-2">
-                              카카오내비
-                            </div>
-                            <div data-v-a8cb2402=""
-                              class="style-border mx-6 h-[1.4rem] w-[1px] border-r border-r-[#eee]"></div>
-                            <div data-v-a8cb2402="" class="mr-6 flex items-center justify-center w-1/3"><img
-                                data-v-a8cb2402="" src="https://cdn2.makedear.com/homepage/img/icon/tmap1.png"
-                                draggable="false" class="naviicon-tmap mr-2">
-                              티맵
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> <!---->
                   </section>
                   <section data-v-75bef60a="" id="editor-section-way-to-come"
                     class="base-section relative bgpoint1 select-none large GowunDodum style3 !pt-0 bgpaper"
@@ -1305,7 +1035,7 @@
                       </div>
                     </h2> <!----> <!----> <!---->
                     <div class="flex flex-col w-full"
-                    style="background-image: url(&quot;https://s3.rollinginpapercard.com/marryBook/null&quot;); background-repeat: no-repeat; background-size: contain; padding-top: 0px; background-color: rgb(241, 241, 241);">
+                    style="background-image: url(&quot;https://s3.rollinginpapercard.com/marryBook/null&quot;); background-repeat: no-repeat; background-size: contain; padding-top: 0px;">
                       <div class="px-[1rem] pt-[2.5rem] pb-[2.5rem] border-l border-r">
                         <div
                           style="opacity: 1; transform: translate3d(0px, 0px, 0px); transition-property: all; transition-duration: 1s; transition-timing-function: cubic-bezier(0, 0, 0.2, 1); transition-delay: 0s;">
@@ -1656,10 +1386,7 @@
                     class="base-section relative bgpoint2 lower select-none large GowunDodum style3 !pb-28 bgpaper"
                     section-id="editor-section-account"
                     style="padding-top: 4rem; padding-bottom: 4rem; transform: scale(1); z-index: 17;">
-                    <div class="top-0 left-0 absolute -translate-y-[96%] z-[1] w-full"><!----> <!----> <img
-                        src="https://cdn2.makedear.com/homepage/img/bg3/gray-top.png" draggable="false" class="w-full">
-                      <!----> <!----> <!---->
-                    </div>
+                    <div class="top-0 left-0 absolute -translate-y-[96%] z-[1] w-full"><!----> <!----> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 65" preserveAspectRatio="xMidYMid meet"><g fill="#f9f6f1" stroke="none" transform="translate(0,65) scale(0.1,-0.1)"><path d="M6470 629 c-1061 -34 -2002 -142 -3561 -408 -675 -115 -1198 -174 -1899 -214 -30 -2 2755 -3 6190 -3 3435 0 6225 1 6200 3 -25 1 -126 7 -225 13 -536 32 -1103 100 -1740 210 -737 127 -1570 247 -2110 305 -835 89 -1920 125 -2855 94z"></path></g> <g fill="#f9f9f9" stroke="none" transform="translate(0,65) scale(0.1,-0.1)" class="opacity-50"><path d="M0 322 l0 -322 3073 1 c1689 1 3018 5 2952 10 -705 47 -1210 110 -1970 245 -324 57 -1231 193 -1590 238 -665 83 -1301 126 -2117 142 l-348 7 0 -321z"></path> <path d="M13880 633 c-743 -17 -1425 -69 -2105 -159 -340 -45 -1173 -172 -1460 -223 -763 -135 -1251 -194 -2020 -244 -27 -2 1335 -4 3028 -5 l3077 -2 0 320 0 320 -207 -2 c-115 -1 -255 -3 -313 -5z"></path></g></svg> <!----> <!----> <!----></div>
                     <div class="section-box">
                       <h2 data-aos="fade-up" class="section-label whitespace-pre-wrap aos-init">
                         <div>Account</div>
@@ -1688,8 +1415,6 @@
                                 신랑측</p> <svg data-v-e27ae18c="" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor"
                                 class="style-icon arrow-icon absolute top-1/2 right-6 -translate-y-1/2 justify-self-end rotate-180">
-                                <path data-v-e27ae18c="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                  d="M19 9l-7 7-7-7"></path>
                               </svg>
                             </div>
                           </div>
@@ -1704,26 +1429,18 @@
                                       data-v-e27ae18c="" class="mr-2">신랑</span> <span data-v-e27ae18c=""
                                       class="font-semibold">
                                       <p>김휘진</p>
-                                    </span></div> <a data-v-e27ae18c="" draggable="false"
-                                    href="https://qr.kakaopay.com/FUicXFvBN" target="_blank"
-                                    class="copy-btn kakao-copy-btn flex items-center !bg-[#ffdf00] !border-[#ffdf00] rounded-lg"><img
-                                      data-v-e27ae18c="" src="https://cdn2.makedear.com/homepage/img/kpay_a.webp"
-                                      draggable="false" class="kakao-copy-img mt-1 mx-auto"></a>
+                                    </span></div>
                                 </div>
                                 <div data-v-e27ae18c="" class="mt-2 flex items-start justify-between w-full">
-                                  <div data-v-e27ae18c=""
-                                    class="flex items-center w-[72%] text-left leading-custom whitespace-pre-wrap"><span
-                                      data-v-e27ae18c="" class="mr-2">국민</span> <span data-v-e27ae18c=""
-                                      class="tracking-normal">657802 01 347517 </span></div> <button data-v-e27ae18c=""
-                                    data-group="0" data-account="0" data-clipboard-text="국민 657802 01 347517 "
-                                    class="copy-btn kakao-copy-btn text-sm relative flex items-center justify-center border rounded-lg"><img
-                                      data-v-e27ae18c="" src="https://cdn2.makedear.com/homepage/img/copy.png"
-                                      draggable="false" class="copy-img mr-2"> <span data-v-e27ae18c=""
-                                      class="text-base">복사</span>
-                                    <div data-v-e27ae18c="" id="copy-account-popup-0-0"
-                                      class="copy-notice text-sm px-2 py-1 absolute right-0 -bottom-12 flex items-center bg-black bg-opacity-50 opacity-0 rounded-lg text-white transition-all duration-500 whitespace-nowrap">
-                                      <span data-v-e27ae18c="">국민 657802 01 347517 복사되었습니다</span>
-                                    </div>
+                                  <div data-v-e27ae18c="" class="flex items-center w-[72%] text-left leading-custom whitespace-pre-wrap">
+                                    <span data-v-e27ae18c="" class="mr-2">토스</span>
+                                    <span data-v-e27ae18c="" class="tracking-normal">1000-4992-0354</span>
+                                  </div>
+                                  <button data-v-e27ae18c=""
+                                    data-group="0" data-account="0" data-clipboard-text="토스 1000-4992-0354"
+                                    class="copy-btn kakao-copy-btn text-sm relative flex items-center justify-center border rounded-lg">
+                                    <img data-v-e27ae18c="" src="https://cdn2.makedear.com/homepage/img/copy.png" draggable="false" class="copy-img mr-2">
+                                    <span data-v-e27ae18c="" class="text-base" onclick="copy('토스 1000-4992-0354')">복사</span>
                                   </button>
                                 </div>
                               </div>
@@ -1767,12 +1484,7 @@
                             <div data-v-e27ae18c="" class="relative w-full">
                               <p data-v-e27ae18c=""
                                 class="flex flex-col items-center justify-center tracking-tighter select-none whitespace-pre-wrap">
-                                신부측</p> <svg data-v-e27ae18c="" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor"
-                                class="style-icon arrow-icon absolute top-1/2 right-6 -translate-y-1/2 justify-self-end rotate-180">
-                                <path data-v-e27ae18c="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                  d="M19 9l-7 7-7-7"></path>
-                              </svg>
+                                신부측</p>
                             </div>
                           </div>
                           <div data-v-e27ae18c="" data-v-4097cd0e="" style="">
@@ -1787,26 +1499,18 @@
                                       <p>신부</p>
                                     </span> <span data-v-e27ae18c="" class="font-semibold">
                                       <p>주현정</p>
-                                    </span></div> <a data-v-e27ae18c="" draggable="false"
-                                    href="https://qr.kakaopay.com/Ej7of8XXN" target="_blank"
-                                    class="copy-btn kakao-copy-btn flex items-center !bg-[#ffdf00] !border-[#ffdf00] rounded-lg"><img
-                                      data-v-e27ae18c="" src="https://cdn2.makedear.com/homepage/img/kpay_a.webp"
-                                      draggable="false" class="kakao-copy-img mt-1 mx-auto"></a>
+                                    </span></div>
                                 </div>
                                 <div data-v-e27ae18c="" class="mt-2 flex items-start justify-between w-full">
                                   <div data-v-e27ae18c=""
                                     class="flex items-center w-[72%] text-left leading-custom whitespace-pre-wrap"><span
-                                      data-v-e27ae18c="" class="mr-2">농협</span> <span data-v-e27ae18c=""
-                                      class="tracking-normal">3521043393613</span></div> <button data-v-e27ae18c=""
-                                    data-group="1" data-account="0" data-clipboard-text="농협 3521043393613"
+                                      data-v-e27ae18c="" class="mr-2">우리</span> <span data-v-e27ae18c=""
+                                      class="tracking-normal">100-2781-122634</span></div> <button data-v-e27ae18c=""
+                                    data-group="1" data-account="0" data-clipboard-text="우리 100-2781-122634"
                                     class="copy-btn kakao-copy-btn text-sm relative flex items-center justify-center border rounded-lg"><img
                                       data-v-e27ae18c="" src="https://cdn2.makedear.com/homepage/img/copy.png"
                                       draggable="false" class="copy-img mr-2"> <span data-v-e27ae18c=""
-                                      class="text-base">복사</span>
-                                    <div data-v-e27ae18c="" id="copy-account-popup-1-0"
-                                      class="copy-notice text-sm px-2 py-1 absolute right-0 -bottom-12 flex items-center bg-black bg-opacity-50 opacity-0 rounded-lg text-white transition-all duration-500 whitespace-nowrap">
-                                      <span data-v-e27ae18c="">농협 3521043393613 복사되었습니다</span>
-                                    </div>
+                                      class="text-base" onclick="copy('우리 100-2781-122634')">복사</span>
                                   </button>
                                 </div>
                               </div>
@@ -1827,17 +1531,13 @@
                                 <div data-v-e27ae18c="" class="mt-2 flex items-start justify-between w-full">
                                   <div data-v-e27ae18c=""
                                     class="flex items-center w-[72%] text-left leading-custom whitespace-pre-wrap"><span
-                                      data-v-e27ae18c="" class="mr-2">농협</span> <span data-v-e27ae18c=""
-                                      class="tracking-normal">3510754504453</span></div> <button data-v-e27ae18c=""
-                                    data-group="1" data-account="1" data-clipboard-text="농협 3510754504453"
+                                      data-v-e27ae18c="" class="mr-2">우리</span> <span data-v-e27ae18c=""
+                                      class="tracking-normal">100-2032-926606</span></div> <button data-v-e27ae18c=""
+                                    data-group="1" data-account="1" data-clipboard-text="우리 100-2032-926606"
                                     class="copy-btn kakao-copy-btn text-sm relative flex items-center justify-center border rounded-lg"><img
                                       data-v-e27ae18c="" src="https://cdn2.makedear.com/homepage/img/copy.png"
                                       draggable="false" class="copy-img mr-2"> <span data-v-e27ae18c=""
-                                      class="text-base">복사</span>
-                                    <div data-v-e27ae18c="" id="copy-account-popup-1-1"
-                                      class="copy-notice text-sm px-2 py-1 absolute right-0 -bottom-12 flex items-center bg-black bg-opacity-50 opacity-0 rounded-lg text-white transition-all duration-500 whitespace-nowrap">
-                                      <span data-v-e27ae18c="">농협 3510754504453 복사되었습니다</span>
-                                    </div>
+                                      class="text-base" onclick="copy('우리 100-2032-926606')">복사</span>
                                   </button>
                                 </div>
                               </div>
@@ -1848,11 +1548,11 @@
                     </div> <!---->
                   </section>
                   <section data-v-0315447a="" data-v-75bef60a="" id="editor-section-paragraph"
-                    class="base-section relative bgpoint1 select-none large GowunDodum style3 !pb-28 bgpaper"
+                    class="base-section relative select-none large GowunDodum style3 !pb-28 bgpaper"
                     section-id="editor-section-paragraph"
                     style="padding-top: 4rem; padding-bottom: 4rem; transform: scale(1); z-index: 20;">
                     <div class="top-0 left-0 absolute -translate-y-[96%] z-[1] w-full"><!----> <!----> <img
-                        src="https://cdn2.makedear.com/homepage/img/bg3/gray-top.png" draggable="false" class="w-full">
+                        src="https://cdn2.makedear.com/homepage/img/bg3/white-top.png" draggable="false" class="w-full">
                       <!----> <!----> <!---->
                     </div>
                     <div data-v-0315447a="" data-aos="fade-up"
@@ -2294,6 +1994,27 @@
 	</div>
 </body>
 <script>
+  var mapOptions = {
+      center: new naver.maps.LatLng(37.5152535228382, 127.103068896795),
+      zoom: 18
+  };
+
+  var map = new naver.maps.Map('map', mapOptions);
+
+  var markerOptions = {
+	        	    position: new naver.maps.LatLng(37.5152535228382, 127.103068896795), //마커찍을 좌표
+	        	    map: map,
+	        	    icon: {
+	        	        url: 'resources/img/marker.png', //아이콘 경로
+	        	        size: new naver.maps.Size(22, 36), //아이콘 크기
+	        	        origin: new naver.maps.Point(0, 0),
+	        	        anchor: new naver.maps.Point(11, 35)
+	        	    }
+	        	};
+	        
+    // 마커 생성
+    var marker = new naver.maps.Marker(markerOptions);
+
   const width = Math.min(window.innerWidth, 800);
   const aosElems = document.querySelectorAll(".aos-init");
 
