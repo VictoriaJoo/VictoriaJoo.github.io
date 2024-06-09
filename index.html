@@ -1960,7 +1960,7 @@
 										</div>
 									</div>
 								</div>
-								<div data-index="2" class="slick-slide slick-active slick-current" tabindex="-1"
+								<div data-index="2" class="slick-slide" tabindex="-1"
 									aria-hidden="false" style="outline: none; width: 800px;">
 									<div>
 										<div class="select-none" tabindex="-1"><img
@@ -2294,6 +2294,7 @@
 	</div>
 </body>
 <script>
+  const width = Math.min(window.innerWidth, 800);
   const aosElems = document.querySelectorAll(".aos-init");
 
   window.addEventListener('scroll', () => {
@@ -2365,16 +2366,16 @@
   }
 
   const changeGalleryDetailPage = (pageNo) => {
-    const xPos = 0 + window.innerWidth * (pageNo - 1);
-    document.querySelector(".gallery-detail").setAttribute("style", `width: ${35 * window.innerWidth}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
+    const xPos = 0 + width * (pageNo - 1);
+    document.querySelector(".gallery-detail").setAttribute("style", `width: ${35 * width}px; opacity: 1; transform: translate3d(-${xPos}px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;`);
   }
 
   const prevDetail = () => {
     const styleString = document.querySelector(".gallery-detail").getAttribute("style");
     const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
-    const nextXPos = nowXPos - window.innerWidth;
+    const nextXPos = nowXPos - width;
     if (nextXPos >= 0) {
-      changeGalleryDetailPage(nextXPos / window.innerWidth + 1);
+      changeGalleryDetailPage(nextXPos / width + 1);
     }
   }
 
@@ -2382,12 +2383,12 @@
     const styleString = document.querySelector(".gallery-detail").getAttribute("style");
     const maxWidth = Number(styleString.split("px;")[0].split("width: ")[1]);
     const nowXPos = Number(styleString.split("translate3d(-")[1].split("px")[0]);
-    const nextXPos = nowXPos + window.innerWidth;
+    const nextXPos = nowXPos + width;
 
     console.log(maxWidth);
 
     if (nextXPos < maxWidth) {
-      changeGalleryDetailPage(nextXPos / window.innerWidth + 1);
+      changeGalleryDetailPage(nextXPos / width + 1);
     }
   }
 
