@@ -4559,6 +4559,10 @@ img,video {
     width: calc(33% - 5px)
 }
 
+.w-\[calc\(100\%\)\] {
+    width: calc(100%)
+}
+
 .w-fit {
     width: -moz-fit-content;
     width: fit-content
@@ -6029,7 +6033,7 @@ img,video {
 
 #imageViewer {
     position: fixed;
-    z-index: 1300;
+    z-index: 9999;
     inset: 0px;
 }
 

@@ -91,15 +91,16 @@
             <div class="relative max-w-[44rem]" data-v-fc9425ac="">
               <div data-v-75bef60a="" data-v-fc9425ac="" id="cardview"
                 class="base-section relative no-scrollbar large GowunDodum style3">
-                <div data-v-75bef60a="" id="card-top"></div> <audio data-v-75bef60a="" loop="loop"
-                  src="https://cdn2.makedear.com/homepage/media/new/10.mp3" playsinline="true" muted="muted"></audio>
-                <div data-v-75bef60a="" id="bgm-banner">
+                <div data-v-75bef60a="" id="card-top"></div>
+                <audio data-v-75bef60a="" loop="loop" src="./static/audio/background_music.mp3" playsinline="true"></audio>
+                <div data-v-75bef60a="" id="bgm-banner" onclick="toggleMusic()">
                   <div data-v-75bef60a=""
                     class="bgmbannericon box-content p-4 absolute top-0 right-8 z-[9999] opacity-0 bg-[#eee] bg-opacity-50 rounded-full text-[#222] transition-all ease-in-out duration-500 overflow-hidden cursor-pointer"
-                    style="top: 0px; opacity: 0; pointer-events: none;"><a data-v-75bef60a="" draggable="false"><svg
+                    style="position: fixed; height: 2rem; width: 2rem; top: 2rem; opacity: 1;"><a data-v-75bef60a="" draggable="false">
+                      <svg
                         data-v-75bef60a="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                        <path data-v-75bef60a=""
+                        <path id="btn-music" data-v-75bef60a=""
                           d="M16 9L22 15M22 9L16 15M13 3L7 8H5C3.89543 8 3 8.89543 3 10V14C3 15.1046 3.89543 16 5 16H7L13 21V3Z">
                         </path>
                       </svg></a></div>
@@ -817,7 +818,7 @@
                       </div>
                     </div> <!---->
                     <div data-v-a8cb2402="" data-aos="fade-up" class="px-12 w-full aos-init">
-                      <div id="map" style="width:100%;height:400px;"></div>
+                      <div id="map" style="width:100%;height:300px;"></div>
                     </div>
                   </section>
                   <section data-v-75bef60a="" id="editor-section-way-to-come"
@@ -1068,62 +1069,126 @@
                               <div class="slick-slider slick-initialized" dir="ltr">
                                 <div class="slick-list">
                                   <div class="slick-track gallery"
-                                    style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 1674px;">
+                                    style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 14630px;">
 
                                     <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
                                       aria-hidden="false" style="outline: none; width: 418px;">
                                       <div>
                                         <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
                                           style="width: 100%; display: inline-block;">
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/01.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/02.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="2" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/03.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="3" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/04.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="4" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/05.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="5" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/06.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="6" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/07.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="7" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/08.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="8" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/09.jpg" alt="test_img">
@@ -1132,61 +1197,124 @@
                                         </div>
                                       </div>
                                     </div>
-
-                                    <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                      style="outline: none; width: 418px;">
+                                    <div data-index="9" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
                                       <div>
                                         <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
                                           style="width: 100%; display: inline-block;">
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/10.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="10" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/11.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="11" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/12.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="12" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/13.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="13" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/14.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="14" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/15.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="15" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/16.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="16" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/17.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="17" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/18.jpg" alt="test_img">
@@ -1195,60 +1323,124 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                      style="outline: none; width: 418px;">
+                                    <div data-index="18" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
                                       <div>
                                         <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
                                           style="width: 100%; display: inline-block;">
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/19.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="19" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/20.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="20" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/21.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="21" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/22.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="22" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/23.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="23" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/24.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="24" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/25.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="25" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/26.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="26" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/27.jpg" alt="test_img">
@@ -1257,54 +1449,110 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
-                                      style="outline: none; width: 418px;">
+                                    <div data-index="27" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
                                       <div>
                                         <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
                                           style="width: 100%; display: inline-block;">
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/28.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="28" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/29.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="29" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/30.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="30" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/31.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="31" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/32.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] false mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="32" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/33.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="33" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/34.jpg" alt="test_img">
                                             </div>
                                           </div>
-                                          <div class="w-[calc(33%-5px)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-index="34" class="slick-slide slick-active slick-current" tabindex="-1"
+                                      aria-hidden="false" style="outline: none; width: 418px;">
+                                      <div>
+                                        <div class="!flex flex-row flex-wrap justify-center items-center" tabindex="-1"
+                                          style="width: 100%; display: inline-block;">
+                                          <div class="w-[calc(100%)] mr-[5px] mb-[5px] cursor-pointer gallery-item">
                                             <div class="h-0 pb-[100%] relative">
                                               <img class="absolute top-0 left-0 w-full h-full object-cover"
                                                 src="./static/image/gallery/35.jpg" alt="test_img">
@@ -1322,6 +1570,22 @@
                                   <li onclick="changeGalleryPage(2)"><button>2</button></li>
                                   <li onclick="changeGalleryPage(3)"><button>3</button></li>
                                   <li onclick="changeGalleryPage(4)"><button>4</button></li>
+                                  <li onclick="changeGalleryPage(5)"><button>5</button></li>
+                                  <li onclick="changeGalleryPage(6)"><button>6</button></li>
+                                  <li onclick="changeGalleryPage(7)"><button>7</button></li>
+                                  <li onclick="changeGalleryPage(8)"><button>8</button></li>
+                                  <li onclick="changeGalleryPage(9)"><button>9</button></li>
+                                  <li onclick="changeGalleryPage(10)"><button>10</button></li>
+                                  <li onclick="changeGalleryPage(11)"><button>11</button></li>
+                                  <li onclick="changeGalleryPage(12)"><button>12</button></li>
+                                  <li onclick="changeGalleryPage(13)"><button>13</button></li>
+                                  <li onclick="changeGalleryPage(14)"><button>14</button></li>
+                                  <li onclick="changeGalleryPage(15)"><button>15</button></li>
+                                  <li onclick="changeGalleryPage(16)"><button>16</button></li>
+                                  <li onclick="changeGalleryPage(17)"><button>17</button></li>
+                                  <li onclick="changeGalleryPage(18)"><button>18</button></li>
+                                  <li onclick="changeGalleryPage(19)"><button>19</button></li>
+                                  <li onclick="changeGalleryPage(20)"><button>20</button></li>
                                 </ul>
                               </div>
                             </div>
@@ -2028,15 +2292,30 @@
     console.log(e.target.innerWidth);
   }
 
+  let isMusicOn = false;
+  const musicBtnPath = document.querySelector("path#btn-music");
+
+  const toggleMusic = () => {
+    if(isMusicOn){
+      stopMusic();
+    }
+    else{
+      playMusic();
+    }
+
+    isMusicOn = !isMusicOn;
+  }
+
   const playMusic = () => {
     const audio = document.querySelector('audio');
     audio.play();
+    musicBtnPath.setAttribute('d', 'M16 9C16.5 9.5 17 10.5 17 12C17 13.5 16.5 14.5 16 15M19 6C20.5 7.5 21 10 21 12C21 14 20.5 16.5 19 18M13 3L7 8H5C3.89543 8 3 8.89543 3 10V14C3 15.1046 3.89543 16 5 16H7L13 21V3Z'); 
   }
 
   const stopMusic = () => {
     const audio = document.querySelector('audio');
     audio.pause();
-    audio.currentTime = 0;
+    musicBtnPath.setAttribute('d', 'M16 9L22 15M22 9L16 15M13 3L7 8H5C3.89543 8 3 8.89543 3 10V14C3 15.1046 3.89543 16 5 16H7L13 21V3Z');
   }
 
   const openModal = (id) => {
@@ -2070,7 +2349,7 @@
 
   const changeGalleryPage = (pageNo) => {
     const xPos = 0 + (galleryWidth) * (pageNo - 1);
-    document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${(galleryWidth) * 4}px;`);
+    document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${(galleryWidth) * 35}px;`);
 
     const dots = document.querySelector(".slick-dots");
     Array.from(dots.children).forEach(dot => dot.setAttribute("class", ""));
@@ -2128,7 +2407,7 @@
 
   console.log("start");
 
-  document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-0px, 0px, 0px); width: ${(galleryWidth) * 4}px;`);
+  document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-0px, 0px, 0px); width: ${(galleryWidth) * 35}px;`);
   document.querySelectorAll('.gallery > .slick-slide').forEach(
     item => {
       item.setAttribute("style", `outline: none; width: ${galleryWidth}px;`);
