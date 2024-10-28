@@ -2298,10 +2298,6 @@
     });
   })
 
-  window.onresize = (e) => {
-    console.log(e.target.innerWidth);
-  }
-
   let isMusicOn = false;
   const musicBtnPath = document.querySelector("path#btn-music");
 
@@ -2341,7 +2337,6 @@
   const pageSize = document.querySelector(".slick-track").querySelectorAll('img').length - 1;
 
   const openImageView = (pageNo) => {
-    console.log(pageNo);
     document.body.setAttribute("style", "touch-action: pan-y; background: rgb(53, 54, 58); overflow-y: hidden");
     changeGalleryDetailPage(pageNo);
     openModal("imageViewer");
@@ -2508,13 +2503,11 @@
     else{
       // PC 클릭 이벤트 (드래그)
       slide.addEventListener("mousedown", (e) => {
-        console.log("mousedown", e.pageX);
         startPoint = e.pageX;
       });
 
       slide.addEventListener("mouseup", (e) => {
         endPoint = e.pageX;
-        console.log("mouseup", e.pageX);
         if (endPoint - startPoint > dragLength) {
           prevPage();
         } else if (startPoint - endPoint > dragLength) {
