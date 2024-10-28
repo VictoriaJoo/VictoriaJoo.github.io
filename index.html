@@ -2493,9 +2493,9 @@
 
       slide.addEventListener("touchend", (e) => {
         endPoint = e.changedTouches[0].pageX;
-        if (startPoint < endPoint) {
+        if (endPoint - startPoint > dragLength) {
           prevPage();
-        } else if (startPoint > endPoint) {
+        } else if (startPoint - endPoint > dragLength) {
           nextPage();
         }
       });
