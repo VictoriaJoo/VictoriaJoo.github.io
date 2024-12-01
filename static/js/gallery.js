@@ -14,37 +14,45 @@ const closeImageView = () => {
 }
 
 const changeGalleryPageText = (pageNumber) => {
-  document.querySelector(".gallery-number-area").innerText = `${pad(pageNumber, 2)} / ${pageSize}`;
+  document.querySelector(".gallery-number-area").innerText = `${pad(pageNumber, 2)} / ${pageSize-1}`;
 }
 
 const changeGalleryPage = (pageNo) => {
-  if(pageNo > 0 && pageNo <= 2){
-    const xPos = 0 + (galleryWidth) * (pageNo-1);
-    document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${galleryWidth * 2}px;`);
+  if(pageNo === 0){
+    pageNo = 2;
+  }
+  else if(pageNo === 3){
+    pageNo = 1;
+  }
 
-    let dots = Array.from(document.querySelector('.slick-dots').children);
-    for(var i=0; i<dots.length; i++){
-      if(i === pageNo-1){
-        dots[i].classList.add('slick-active');
-      }
-      else{
-        dots[i].classList.remove('slick-active');
-      }
+  const xPos = 0 + (galleryWidth) * (pageNo-1);
+  document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${galleryWidth * 2}px;`);
+
+  let dots = Array.from(document.querySelector('.slick-dots').children);
+  for(var i=0; i<dots.length; i++){
+    if(i === pageNo-1){
+      dots[i].classList.add('slick-active');
+    }
+    else{
+      dots[i].classList.remove('slick-active');
     }
   }
 }
 
 const changeGalleryDetailPage = (pageNo) => {
-  let sumWidth = detailWidth * (pageSize+2);
-  if(pageNo === 0){
+  let sumWidth = detailWidth * (pageSize+1);
+  if(pageNo === 1){
     const xPos = 0 + detailWidth * (pageNo);
     document.querySelector(".gallery-detail").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${sumWidth}px;`);
   }
-  else if(pageNo < 0){
+  else if(pageNo < 1){
+    const xPos = 0 + detailWidth * (pageNo);
     const tempXPos = 0 + detailWidth * (pageSize);
-    document.querySelector(".gallery-detail").setAttribute("style", `transform: translate3d(-${tempXPos}px, 0px, 0px); width: ${sumWidth}px;`);
+    document.querySelector(".gallery-detail").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-${xPos}px, 0px, 0px); width: ${sumWidth}px;`);
     
-    setTimeout(changeGalleryDetailPage, 10, pageSize-1);
+    setTimeout(() => {
+      document.querySelector(".gallery-detail").setAttribute("style", `transform: translate3d(-${tempXPos}px, 0px, 0px); width: ${sumWidth}px;`);
+    }, 500);
   }
   else if(pageNo > pageSize){
     const tempXPos = 0;
@@ -83,7 +91,7 @@ const prevDetailPage = () => {
   const nextPageNo = nextXPos / detailWidth;
 
   changeGalleryDetailPage(nextPageNo);
-  changeGalleryPage(Math.floor(nextPageNo/9) + 1);
+  changeGalleryPage(Math.ceil(nextPageNo/9));
 }
 
 const nextDetailPage = () => {
@@ -93,7 +101,7 @@ const nextDetailPage = () => {
 
   const nextPageNo = nextXPos / detailWidth;
   changeGalleryDetailPage(nextPageNo);
-  changeGalleryPage(Math.floor(nextPageNo/9) + 1);
+  changeGalleryPage(Math.ceil(nextPageNo/9));
 }
 
 function setDragLength(sensitivity){
@@ -177,7 +185,7 @@ const addSwipeDetailEvent = (slide) => {
 }
 
 function addSwipeEventAll(galleryWidth, detailWidth, pageSize){
-  document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-0px, 0px, 0px); width: ${(galleryWidth) * (pageSize+1)}px;`);
+  document.querySelector(".gallery").setAttribute("style", `transition: -webkit-transform 500ms ease 0s; transform: translate3d(-0px, 0px, 0px); width: ${(galleryWidth) * (pageSize)}px;`);
   document.querySelectorAll('.gallery > .slick-slide').forEach(
       item => {
       item.setAttribute("style", `outline: none; width: ${galleryWidth}px;`);
