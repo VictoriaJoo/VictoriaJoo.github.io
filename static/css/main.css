@@ -9385,8 +9385,7 @@ span mark {
 .style3 .textpoint2,
 .style3 .textpoint3 {
   --tw-text-opacity: 1;
-  color: #9b7f5f;
-  color: rgba(155, 127, 95, var(--tw-text-opacity))
+  color: #d08c95;
 }
 
 .style3 .cal-text-1 {
@@ -9405,8 +9404,7 @@ span mark {
 .style3 .cal-heart:before,
 .style3 .cal-part {
   --tw-bg-opacity: 1;
-  background-color: #d1b7a1;
-  background-color: rgba(209, 183, 161, var(--tw-bg-opacity))
+  background-color: #d08c95;
 }
 
 .style3 .detail-border {
