@@ -9396,8 +9396,7 @@ span mark {
 
 .style3 .cal-text-2 {
   --tw-text-opacity: 1;
-  color: #b59274;
-  color: rgba(181, 146, 116, var(--tw-text-opacity))
+  color: #d08c95;
 }
 
 .style3 .cal-heart:after,
